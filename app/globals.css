@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@layer base {
+  * {
+    border-color: #e5e7eb;
+  }
+  body {
+    background-color: #ffffff;
+    color: #000000;
+  }
+}
+
+@layer utilities {
+  .text-shadow-bottom{
+    /* subtle tight shadow + deep soft shadow pushed down */
+    text-shadow:
+      0 1px 0 rgba(0,0,0,0.28),
+      0 10px 16px rgba(0,0,0,0.65);
+  }
+}
+
+/* Gradient text effect */
+.gradient-text {
+  background: linear-gradient(to bottom, #FFFFFF 50%, #B8B8B8 100%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+/* Marquee animation */
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee-content {
+  display: inline-block;
+  animation: marquee 60s linear infinite 1s;
+  transform: translateX(0);
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+
+
+  
